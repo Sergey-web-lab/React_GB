@@ -1,3 +1,7 @@
+* {
+  list-style: none;
+}
+
 .App,
 .Message {
   text-align: center;

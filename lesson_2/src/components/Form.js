@@ -1,4 +1,4 @@
-import '../App.css';
+import '../MainPage.css';
 import React, { Component } from 'react';
 
 export default class Form extends Component {
