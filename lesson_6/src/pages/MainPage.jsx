@@ -1,6 +1,6 @@
 // import '../src/MainPage.css';
 import { Component, useEffect } from 'react';
-import Form from '../components/Form';
+import { Form } from '../components/Form';
 import PostList from '../components/PostList';
 import UseEffectCheck from '../components/UseEffectCheck';
 
@@ -10,9 +10,9 @@ export default class MainPage extends Component {
         super(props);
         this.state = {
             messageList: [
-                { text: 'Hello', author: 'Sergey', id: 1 },
-                { text: 'Hi', author: 'Andrey', id: 2 },
-                { text: 'Salutation', author: 'Pasha', id: 3 }
+                // { text: 'Hello', author: 'Sergey', id: 1 },
+                // { text: 'Hi', author: 'Andrey', id: 2 },
+                // { text: 'Salutation', author: 'Pasha', id: 3 }
             ]
         };
         this.addMessageList = this.addMessageList.bind(this);
