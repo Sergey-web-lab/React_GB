@@ -6,6 +6,8 @@ import { ChatPage } from "./pages/ChatPage"
 import { ChatList } from "./components/ChatList"
 import { useState } from "react"
 import { nanoid } from "nanoid"
+import { PersistGate } from "redux-persist/integration/react"
+import { store, persistor } from "./store"
 
 const defaultMessages = {
   default: [
@@ -22,7 +24,7 @@ const defaultMessages = {
 
 export function App() {
 
-  const [messages, setMessages] = useState(defaultMessages)
+  // const [messages, setMessages] = useState(defaultMessages)
 
   // const chats = Object.keys(messages).map((chat) => ({
   //   id: nanoid(),
@@ -45,18 +47,19 @@ export function App() {
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Header></Header>}>
-          <Route index element={<MainPage></MainPage>}></Route>
-          <Route path="profile" element={<ProfilePage></ProfilePage>}></Route>
-          <Route path="chats">
-            <Route index element={<ChatList></ChatList>}></Route>
-            <Route path=":chatId" element={<ChatPage></ChatPage>}></Route>
+      <PersistGate persistor={persistor}>
+        <Routes>
+          <Route path="/" element={<Header></Header>}>
+            <Route index element={<MainPage></MainPage>}></Route>
+            <Route path="profile" element={<ProfilePage></ProfilePage>}></Route>
+            <Route path="chats">
+              <Route index element={<ChatList></ChatList>}></Route>
+              <Route path=":chatId" element={<ChatPage></ChatPage>}></Route>
+            </Route>
           </Route>
-        </Route>
-
-        <Route path="*" element={<h2>404 Page not found</h2>}></Route>
-      </Routes>
+          <Route path="*" element={<h2>404 Page not found</h2>}></Route>
+        </Routes>
+      </PersistGate>
     </>
   )
 }
