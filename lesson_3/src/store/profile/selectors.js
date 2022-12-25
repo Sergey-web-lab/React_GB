@@ -1,0 +1,1 @@
+// export const changeName = (state) => state.profile.name
