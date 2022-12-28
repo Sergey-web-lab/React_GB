@@ -1,0 +1,1 @@
+export const api = 'https://animechan.vercel.app/api/quotes'

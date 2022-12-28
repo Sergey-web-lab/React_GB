@@ -15,6 +15,11 @@ export const navigate = [
         id: 3,
         name: 'Chat',
         to: '/chats'
+    },
+    {
+        id: 4,
+        name: 'Articles',
+        to: '/articles'
     }
 ]
 
