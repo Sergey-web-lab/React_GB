@@ -9,6 +9,8 @@ import { nanoid } from "nanoid"
 import { PersistGate } from "redux-persist/integration/react"
 import { store, persistor } from "./store"
 import { Articles } from "./pages/Articles"
+import { SignIn } from "./pages/SignIn"
+import { SignUp } from "./pages/SignUp"
 
 const defaultMessages = {
   default: [
@@ -58,6 +60,8 @@ export function App() {
               <Route path=":chatId" element={<ChatPage></ChatPage>}></Route>
             </Route>
             <Route path="articles" element={<Articles></Articles>}></Route>
+            <Route path="signin" element={<SignIn></SignIn>}></Route>
+            <Route path="signup" element={<SignUp></SignUp>}></Route>
           </Route>
           <Route path="*" element={<h2>404 Page not found</h2>}></Route>
         </Routes>

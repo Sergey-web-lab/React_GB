@@ -15,6 +15,8 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 
+import { push, set, remove } from "firebase/database";
+import { getChatById, messagesRef } from "../services/firebase"
 
 export function ChatList() {
 
@@ -56,6 +58,11 @@ export function ChatList() {
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(addChat(value))
+        set(messagesRef, {
+            [value]: {
+                name: value
+            }
+        })
     }
 
     return (

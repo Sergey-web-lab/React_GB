@@ -20,6 +20,16 @@ export const navigate = [
         id: 4,
         name: 'Articles',
         to: '/articles'
+    },
+    {
+        id: 5,
+        name: 'Sign in',
+        to: '/signin'
+    },
+    {
+        id: 6,
+        name: 'Sign up',
+        to: '/signup'
     }
 ]
 
