@@ -1,5 +1,3 @@
-// import PropTypes from 'prop-types'
-
 export function MessageList({ messages }) {
     return (
         <>
@@ -14,7 +12,3 @@ export function MessageList({ messages }) {
         </>
     )
 }
-
-// MessageList.propTypes = {
-//     messages: PropTypes.array
-// }

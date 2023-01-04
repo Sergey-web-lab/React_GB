@@ -28,14 +28,6 @@ export function SignUp() {
         } finally {
             setLoading(false)
         }
-
-        // if (inputs.email === 'GB' && inputs.password == 'GB') {
-        //     dispatch(auth(true))
-        //     navigate('/')
-        // } else {
-        //     setError('Password or email is failed')
-        //     setInputs({ email: '', password: '' })
-        // }
     }
 
     return (

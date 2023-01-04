@@ -27,15 +27,10 @@ export function ChatList() {
         textAlign: 'center',
         color: theme.palette.text.secondary,
     }));
-    // const [messages, setMessages] = useState([])
     const { chatId } = useParams()
     const messages = useSelector(selectMessage)
-    // const addMessage = (newMessage) => {
-    //     setMessages([...messages, newMessage])
-    // }
 
     useEffect(() => {
-        // if (messages.length > 0 && messages[messages.length - 1].author === 'user') {
         if (chatId &&
             messages[chatId]?.length > 0 &&
             messages[chatId][messages[chatId].length - 1].author === 'user') {
@@ -83,12 +78,6 @@ export function ChatList() {
                                                 <Button variant="text" onClick={() => dispatch(deleteChat(chat.name))}>X</Button>
                                             </>
                                         } />
-                                        // <li key={chat.id}>
-                                        //     <Link to={`/chats/${chat.name}`}>
-                                        //         {chat.name}
-                                        //     </Link>
-                                        //     <Button variant="text" onClick={() => dispatch(deleteChat(chat.name))}>X</Button>
-                                        // </li>
                                     ))}
                                 </ul>
                                 <h1>ChatList</h1>
@@ -107,8 +96,6 @@ export function ChatList() {
                     </Grid>
                 </Box>
             </Container>
-
-
         </>
     )
 }

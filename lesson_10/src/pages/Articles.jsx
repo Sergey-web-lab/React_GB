@@ -32,10 +32,6 @@ export function Articles() {
     }
 
     useEffect(() => {
-        // getFetchArticles()
-        // const response = fetch(api)
-        //     .then((res) => res.json())
-        //     .then((data) => setArticles(data))
     }, [])
     return (
         <>
@@ -50,12 +46,6 @@ export function Articles() {
                 <Box sx={{ display: 'flex', justifyContent: 'center' }} key={index}>
                     <Card sx={{ maxWidth: 345 }}>
                         <CardActionArea>
-                            {/* <CardMedia
-                                component="img"
-                                height="140"
-                                image={article.imageUrl}
-                                alt="green iguana"
-                            /> */}
                             <CardContent>
                                 <h1>Quote by anime character</h1>
                                 <Typography gutterBottom variant="h5" component="div">

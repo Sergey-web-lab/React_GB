@@ -12,11 +12,6 @@ export function Form() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // addMessage({
-        //     author: 'user',
-        //     text: text
-        // })
-        // dispatch(addMessage(chatId, text))
         setText('')
         const input = document.querySelector('.formTextInput');
         input.focus()
